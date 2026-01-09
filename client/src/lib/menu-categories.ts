@@ -198,6 +198,12 @@ export const mainCategories: MainCategory[] = [
     description: "Refreshing non-alcoholic beverages",
     subcategories: mocktailsSubcategories,
   },
+  {
+    id: "wine",
+    displayLabel: "WINE",
+    description: "Selection of fine wines",
+    subcategories: wineSubcategories,
+  },
 ];
 
 // Get main category by ID
