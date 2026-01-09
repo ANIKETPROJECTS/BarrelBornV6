@@ -73,7 +73,15 @@ export const barSubcategories: SubCategory[] = [
     dbCategory: "cognac-brandy",
   },
   { id: "liqueurs", displayLabel: "Liqueurs", dbCategory: "liqueurs" },
-  // Wine types
+  // Wine category grouping
+  {
+    id: "wine",
+    displayLabel: "Wine",
+    dbCategory: "wine", 
+  },
+];
+
+export const wineSubcategories: SubCategory[] = [
   {
     id: "sparkling-wine",
     displayLabel: "Sparkling Wine",
@@ -184,6 +192,12 @@ export const mainCategories: MainCategory[] = [
     displayLabel: "MOCKTAILS",
     description: "Refreshing non-alcoholic beverages",
     subcategories: mocktailsSubcategories,
+  },
+  {
+    id: "wine",
+    displayLabel: "WINE",
+    description: "Selection of fine wines",
+    subcategories: wineSubcategories,
   },
 ];
 

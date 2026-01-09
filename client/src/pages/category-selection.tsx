@@ -104,6 +104,7 @@ const subcategoryImages: Record<string, string> = {
   tequila: tequilaImg,
   "cognac-brandy": cognacBrandyImg,
   liqueurs: liqueursImg,
+  wine: fallbackImg,
   "sparkling-wine": fallbackImg,
   "white-wines": fallbackImg,
   "rose-wines": fallbackImg,
@@ -252,7 +253,11 @@ export default function CategorySelection() {
   };
 
   const handleSubcategoryClick = (subcategoryId: string) => {
-    setLocation(`/menu/${categoryId}/${subcategoryId}`);
+    if (subcategoryId === "wine") {
+      setLocation(`/menu/wine`);
+    } else {
+      setLocation(`/menu/${categoryId}/${subcategoryId}`);
+    }
   };
 
   const handleCategoryClick = (catId: string) => {
