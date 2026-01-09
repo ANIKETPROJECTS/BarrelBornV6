@@ -58,6 +58,17 @@ export class MongoStorage implements IStorage {
 
   async connect() {
     await this.client.connect();
+    
+    // Ensure all defined collections exist
+    const existingCollections = await this.db.listCollections().toArray();
+    const existingNames = existingCollections.map(c => c.name);
+    
+    for (const category of this.categories) {
+      if (!existingNames.includes(category)) {
+        console.log(`[Storage] Creating missing collection: ${category}`);
+        await this.db.createCollection(category);
+      }
+    }
   }
 
   async getUser(id: string): Promise<User | undefined> {
