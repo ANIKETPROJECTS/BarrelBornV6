@@ -147,7 +147,6 @@ export const mainCategories: MainCategory[] = [
         dbCategory: "pint-beers",
       },
     ],
-    hidden: true,
   },
   {
     id: "cocktails",
@@ -187,7 +186,6 @@ export const mainCategories: MainCategory[] = [
     displayLabel: "BAR",
     description: "Premium spirits and wines",
     subcategories: barSubcategories,
-    hidden: true,
   },
   {
     id: "desserts",
